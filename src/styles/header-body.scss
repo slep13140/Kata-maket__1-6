@@ -1,0 +1,113 @@
+.header-body {
+    min-width: $smPhoneWidth;
+    height: 88px;
+    background-color: $default-color;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid $line-color;
+    @media (min-width: $tableWidth) {
+        min-width: $tableWidth;
+    }
+    @media (min-width: $minDesktopWidth) {
+        width: $desktopWidth;
+        margin: 0 auto;
+    }
+    @media (min-width: $mainWidth) {
+        visibility: hidden;
+        position: absolute;
+    }    
+}
+
+.header-body__button {
+    width: 40px;
+    height: 40px;
+    background-color: $default-color;
+    border-radius: 50%;
+    &:first-child {
+        filter: none;
+        width: auto;
+        height: auto;
+        cursor: auto;
+        border-radius: 0;
+        margin: 18.59px 16.73px;        
+    }
+    &:nth-child(2) {
+        order: -1;
+        margin: 24px 0px 24px 16px;        
+    }
+    &:nth-child(3) {
+        order: 2;
+        margin: 24px 16px;
+    }
+    &:nth-child(4) {
+        order: 3;
+        margin: 24px 16px 24px 0px;
+    }
+    &:nth-child(5) {
+        width: auto;
+        height: auto;
+        filter: none;
+        cursor: auto;
+        order: 1;
+        margin: 28px 4px 28px auto;
+    }
+    &:nth-child(n + 6) {
+        visibility: hidden;
+        position: absolute;
+    }
+    @media (min-width: $tableWidth) {
+        &:first-child {
+            margin-right: 250.73px;
+        }
+        &:nth-child(2) {
+            order: -2;
+            margin-left: 24px;            
+        }
+        &:nth-child(3) {
+            order: 6;
+        }
+        &:nth-child(4) {
+            order: 7;
+            margin-right: 24px;
+        }
+        &:nth-child(5) {
+            order: 5;
+            margin-left: 20px;
+        }
+        &:nth-child(6) {
+            order: 2;
+            margin-left: auto;
+            visibility: visible;
+            position: relative;
+        }
+        &:nth-child(7) {
+            order: 3;
+            margin-left: 16px;
+            visibility: visible;
+            position: relative;
+        }
+        &:nth-child(8) {
+            order: 4;
+            margin-left: 16px;
+            visibility: visible;
+            position: relative;
+        }
+        &:nth-child(9) {
+            width: auto;
+            height: auto;
+            filter: none;
+            cursor: auto;
+            order: -1;
+            margin: 28px 4px 28px 20px;            
+            visibility: visible;
+            position: relative;
+        }
+    }
+    @media (min-width: $mainWidth) {
+        &:nth-child(n + 6) {
+            visibility: hidden;
+            position: absolute;
+        }
+    }
+}

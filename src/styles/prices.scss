@@ -1,0 +1,246 @@
+.prices {
+    min-width: $smPhoneWidth;    
+    background-color: $primary-color;
+    border-bottom: 1px solid $line-color;    
+    @media (min-width: $minDesktopWidth) {
+        width: $desktopWidth;        
+    }
+}
+
+.prices__title {
+    min-width: $smPhoneWidth;
+    height: 56px;
+    font-family: $font-regular;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: $focus-color;
+    letter-spacing: -0.2px;
+    background-image: linear-gradient(to right, $primary-color, $default-color);
+    display: flex;
+    span {
+        width: 312px;
+        height: 24px;
+        margin: 16px;
+    }
+    @media (min-width: $tableWidth) {
+        span {
+            width: 140px;
+            height: 24px;
+            margin-left: 24px;
+        }
+    }
+    @media (min-width: $minDesktopWidth) {
+        span {            
+            margin-left: 32px;
+        }
+    }
+}
+
+.prices__swiper {
+    width: 260px;    
+    height: 230px;
+    margin-top: 16px;    
+    display: flex;
+    flex-wrap: wrap;
+    @media (min-width: 513px) {
+        margin-top: 0;
+        display: block;
+        min-width: $resizeSwipe;
+        width: auto;
+        height: auto;
+        margin-left: 24px;
+        overflow: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }        
+
+    }    
+    @media (min-width: $minDesktopWidth) {
+        width: $desktopWidth;
+        margin-left: 32px;
+    }    
+}
+
+.prices__wrapper {
+    display: flex;
+}
+
+.prices__slide {
+    border: solid $default-color;
+    border-radius: 6px;    
+    height: 200px;        
+    background-color: $default-color;
+    margin: 0px 8px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;           
+}
+
+.prices__element {
+    font-family: $font-regular;
+    font-size: 16px;
+    line-height: 18px;
+    color: $success-color;
+    margin-left: 16px;
+    margin-top: 16px;    
+    p {
+        width: 228px;
+        margin-top: 4px;
+    }
+    span {
+        height: 16px;
+        width: 35px;
+        font-family: $font-medium;
+        line-height: 16px;
+        color: $focus-color;        
+    }
+    &:first-child {
+        span {
+            width: 126px;
+        }
+    }
+    &:last-child {
+        height: 42px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        p {
+            width: 81px;
+            height: 18px;
+            white-space: nowrap;
+            margin-bottom: 4px;
+        }
+        button {
+            width: 119px;
+            height: 32px;
+            background-color: $default-color;
+            border-radius: 16px;
+            margin: 10px 16px 16px 28px;           
+        }
+    }
+}
+
+.prices-pagination {
+    margin-left: 106px;
+    margin-top: 16px;
+    .swiper-pagination-bullet {
+        background-color: $pagination-color;
+        width: 12px;
+        height: 12px;        
+        &-active {
+            background-color: $form-color;
+        }    
+    }
+}
+tbody {
+    height: 387px;
+}
+.prices__table {
+    min-width: 720px;
+    height: 387px;    
+    border-collapse: collapse;
+    font-family: $font-regular;
+    font-size: 14px;
+    line-height: 18px;
+    color: $success-color;
+    tr {
+        border-bottom: 1px solid $border-color;
+        height: 63px;
+        background-color: $default-color;
+        &:first-child {
+            background-color: $primary-color;
+            border-bottom: none;
+        }
+        &:last-child {
+            border-bottom: none;            
+        }
+    }
+    th {
+        color: $focus-color;
+        text-align: left;
+        font-family: $font-medium;
+        line-height: 16px;
+        padding-left: 16px;
+    }
+    td {
+        padding-left: 16px;
+    }
+    button {
+        height: 32px;
+        background-color: $default-color;
+        border-radius: 16px;
+    }
+    @media (min-width: $desktopWidth) {
+        width: 1056px;
+        th {
+            padding-left: 24px; 
+        }
+        td {
+            padding-left: 24px;
+        }
+
+    }
+    
+}
+
+.prices__offer {
+    max-height: 233px;
+    min-width: 288px;
+    margin: 16px;
+    font-family: $font-regular;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: $success-color;
+    p {
+        max-height: 137.45px;
+    }
+    button {
+        width: 192px;
+        height: 54.98px;
+        background-color: $primary-color;
+        font-family: $font-medium;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: $success-color;
+        text-align: left;
+        &:hover {
+            filter: none;
+            color: $button-color;
+        }
+        img {
+            margin-left: 6px;
+        }
+    }
+    @media (min-width: 513px) {
+        height: 124px;        
+        width: auto;
+        p {
+            width: 421px;
+            height: 60px;
+        }
+        button {
+            width: 312px;            
+            height: 24px;
+            margin-top: 16px;
+        }
+    }
+    @media (min-width: $tableWidth) {
+        height: 100px;
+        width: 421px;
+        margin: 24px;
+        button {
+            width: 308px;
+            height: 24px;
+            margin-top: 16px;
+        }
+    }
+    @media (min-width: $desktopWidth) {
+        margin: 32px;                
+    }
+}

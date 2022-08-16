@@ -1,0 +1,344 @@
+.mobil-popup {
+    min-width: $minDesktopWidth;
+    height: 2000px;    
+    opacity: 0;    
+    visibility: hidden;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    background-color: $default-color;
+    transition: all 0.8s ease 0s;
+    transform: translate(-100%, 0px);
+    &--open {
+        visibility: visible;
+        transform: translate(0px, 0px);
+        opacity: 96.05%;
+    }     
+    @media (min-width: $tableWidth) {
+        width: 1439px;
+        height: 940px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+    }
+    @media (min-width: $mainWidth) {
+        width: 306px;
+        min-width: 306px;
+        height: 2066px;
+        transform: translate(0px, 0px);
+        opacity: 1;        
+        visibility: visible;
+    }
+}
+
+.mobil-popup__menu { 
+    min-width: $smPhoneWidth;
+    height: 676px;
+    position: relative;
+    z-index: 200;
+    background-color: $default-color;
+    display: flex;
+    flex-direction: column;
+    filter: drop-shadow(16px 16px 52px rgba(14, 24, 80, 0.2));
+    @media (min-width: 360px) {
+        min-width: 360px;
+        width: auto;
+    }
+    @media (min-width: $tableWidth) {
+        height: 1024px;
+        width: $smPhoneWidth;
+    }
+    @media (min-width: $mainWidth) {
+        width: 306px;
+        height: 925px;
+        filter: none;
+    }    
+}
+
+.mobil-popup__header {
+    min-width: $smPhoneWidth;
+    height: 88px;    
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    button {
+        background-color: $default-color;
+        &:first-child {            
+            width: 40px;
+            height: 40px;
+            margin: 24px 0 24px 16px;
+            border-radius: 50%;
+        }
+        &:nth-child(2) {
+            margin: 18.73px 16.73px;
+            filter: none;            
+        }
+        &:last-child {            
+            width: 40px;
+            height: 40px;
+            margin: 24px 16px 24px 78px;
+            border-radius: 50%;
+        }
+    }
+    @media (min-width: 360px) {        
+        button {            
+            &:first-child {
+                margin-left: 24px;
+            }
+            &:nth-child(2) {
+                margin: 16.78px;                
+            }
+            &:last-child {
+                margin-right: 24px;
+                margin: 24px 24px 24px 95px;                
+            }
+        }
+    }
+    @media (min-width: $tableWidth) {
+        width: $smPhoneWidth;        
+        button {
+            &:nth-child(2) {
+                margin: 18.73px 16.73px;                
+            }
+            &:last-child {                
+                margin-left: 62px;                
+            }
+        }
+    }
+    @media (min-width: $mainWidth) {
+        width: 306px;
+        min-width: 306px;
+        height: 110px;
+        button {            
+            &:first-child {
+                position: absolute;
+                visibility: hidden;
+            }
+            &:nth-child(2) {
+                margin: 30px 22px;                
+            }
+            &:last-child {
+                margin: 35px 29px 35px 96.46px;
+            }
+        }
+    }
+}
+
+.mobil-popup__list {
+    list-style: none;    
+    margin-top: 4px;        
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media (min-width: $tableWidth) {
+        margin-top: 28px;
+    }
+    @media (min-width: $mainWidth) {
+        margin-top: 25px;
+    }
+}
+
+.mobil-popup__elem {
+    height: 40px;
+    margin-left: 16px;
+    margin-top: 8px;    
+    position: relative;
+    button {
+        height: 40px;        
+        background-color: $default-color;
+        color: $success-color;
+        font-family: $font-medium;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        filter: none;
+        &:hover {
+            color: $button-color;
+        }        
+    } 
+    img {
+        position: absolute;
+        visibility: hidden;
+    }
+    span {
+        height: 24px;
+    }
+    &:first-child {
+        margin-top: 0;
+        span {
+            width: 120px;
+        }
+    }
+    &:nth-child(2) {
+        span {
+            width: 132px;
+        }
+    }
+    &:nth-child(3) {
+        span {
+            width: 198px;
+        }
+    }
+    &:nth-child(4) {
+        span {
+            width: 149px;
+        }
+    }
+    &:nth-child(5) {
+        span {
+            width: 85px;
+        }
+    }
+    &:nth-child(6) {
+        span {
+            width: 130px;
+        }
+    }
+    &:nth-child(7) {
+        span {
+            width: 188px;
+        }
+    }
+    &:nth-child(8) {
+        span {
+            width: 72px;
+        }
+    }
+    &--active {
+        button {
+            color: $focus-color;
+        }    
+        img {
+            visibility: visible;    
+            left: -16px;
+            top: 0px;
+        }
+    }
+    @media (min-width: 360px) {
+        margin-left: 24px;
+        &--active {               
+            img {                    
+                left: -24px;
+            }
+        }
+    }    
+    @media (min-width: $tableWidth) {
+        margin-top: 14px;
+    }
+    @media (min-width: $mainWidth) {
+        margin-top: 11.31px;
+    }
+}
+
+
+.mobil-popup__icon {
+    margin-top: 28px;    
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    button {
+        margin-left: 16px;
+        background-color: $default-color;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+    @media (min-width: 360px) {
+        margin-left: 8px;
+    }
+    @media (min-width: $tableWidth) {
+        margin-top: 264px;
+    }
+    @media (min-width: $mainWidth) {
+        margin-left: 3px;
+        margin-top: 237px;
+    }
+}
+
+.mobil-popup__contact {
+    height: 80px;
+    margin-top: 4px;
+    margin-left: 16px;    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    @media (min-width: 360px) {
+        margin-left: 24px;    
+    }
+    @media (min-width: $mainWidth) {
+        margin-left: 19px;
+        margin-top: 4.14px;
+    }
+}
+
+.mobil-popup__info {
+    color: $success-color;
+    text-decoration: none;
+    margin-top: 12px;
+    transition-duration: 1s;
+    &:first-child {
+        font-family: $font-medium;
+        font-size: 16px;
+        line-height: 24px;        
+    }
+    &:last-child {
+        font-family: $font-bold;
+        font-size: 24px;
+        line-height: 32px;
+    }
+    &:hover {
+        color: $button-color;
+    }
+    @media (min-width: $mainWidth) {
+        margin-top: 12.4px;
+    }
+}
+
+.mobil-popup__language {
+    margin-left: 9px;
+    margin-top: 8px;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    button {
+        margin-left: 7px;
+        font-family: $font-medium;
+        font-size: 16px;
+        line-height: 24px;
+        color: $success-color;
+        background-color: $default-color;
+        filter: none;
+        &:hover {
+            color: $button-color;            
+            
+        }                
+    }
+    @media (min-width: 360px) {
+        margin-left: 17px;
+    }
+    @media (min-width: $tableWidth) {
+        margin-top: 40px;
+    }
+    @media (min-width: $mainWidth) {
+        margin-left: 14px;
+        margin-top: 40.82px;
+    }
+}
+.mobil-popup__language--active {
+    label {
+        color: $focus-color;
+    }    
+}
+
+.mobil-popup__language--checker {
+    visibility: hidden;
+    position: absolute;
+}
+

@@ -1,0 +1,22 @@
+.body {
+    text-align: center;
+}
+.lock {
+    overflow: hidden;
+}
+
+.body-wrapper {
+    text-align: left;
+    width: $smPhoneWidth;    
+    overflow: hidden;
+    @media (min-width: $resizeSwipe) {
+        width: auto;        
+        min-width: $resizeSwipe;
+    }    
+    @media (min-width: $desktopWidth) {        
+        margin: 0 auto;
+    }
+    @media (min-width: $minDesktopWidth) {
+        width: $mainWidth;
+    }    
+}
